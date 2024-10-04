@@ -84,6 +84,11 @@ public class Empresa {
 		}
 		return listaEmpleadosRango;
 	}
+	
+	public void ajustarSalario(double porcentajeIncremento, Empleado empleado) {
+		double nuevoSalario = empleado.getSalarioBase()+(empleado.getSalarioBase()*porcentajeIncremento/100);
+		empleado.setSalarioBase(nuevoSalario);
+	}
 
 	@Override
 	public String toString() {

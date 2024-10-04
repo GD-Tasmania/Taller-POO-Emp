@@ -1,4 +1,8 @@
+import java.time.LocalDate;
+
 import javax.swing.JOptionPane;
+import javax.swing.JSpinner;
+import javax.swing.SpinnerDateModel;
 
 import Logica.Empleado;
 import Logica.Empresa;
@@ -95,9 +99,9 @@ public class Main {
 		int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la edad: "));
 		double salarioBase = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el salario base: "));
 		double comisiones = Double.parseDouble(JOptionPane.showInputDialog("Ingrese las comisiones: "));
-		
+            
 		Empleado e = new Empleado(nombre, edad, salarioBase, comisiones);
-		emp.agregarEmpleado(e);
+        emp.agregarEmpleado(e);
 	}
 	
 	public static void actualizarEmpleado() {
@@ -148,6 +152,7 @@ public class Main {
 			break;
 		case 5:
 			listarEmpleadosPorRangoSalarial();
+			//emp.ajustarSalario(20, emp.buscarEmpleado("tito"));
 			break;
 		default:
 			break;
